@@ -3,124 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohit Saini | Backend Developer</title>
+    <title>Mohit Saini | Backend Developer & Python Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --bg: #030712;
+            --glass: rgba(17, 24, 39, 0.7);
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .glass { 
+            background: var(--glass); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid var(--border); 
+        }
+
+        .gradient-text { 
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .nav-link:hover { color: #38bdf8; transition: 0.3s ease; }
+
+        .pulse-glow {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+        }
     </style>
 </head>
-<body class="leading-relaxed">
+<body class="selection:bg-sky-500/30">
 
-    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-20 flex justify-between items-center">
-        <h1 class="text-xl font-bold tracking-tighter">MS<span class="text-sky-400">.</span></h1>
-        <div class="space-x-8 hidden md:flex text-sm font-medium">
-            <a href="#about" class="hover:text-sky-400 transition">About</a>
-            <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
-            <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
-            <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+    <nav class="fixed w-full z-50 py-6 px-6 md:px-20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3">
+            <h1 class="text-xl font-bold tracking-tighter">MOHIT<span class="text-sky-400">.</span></h1>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#skills" class="nav-link">Skills</a>
+            </div>
+            <a href="mailto:mohit010901@gmail.com" class="pulse-glow bg-sky-500 hover:bg-sky-400 text-white px-5 py-2 rounded-xl text-sm font-bold transition flex items-center gap-2">
+                <i data-lucide="download" class="w-4 h-4"></i> CV
+            </a>
         </div>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center text-center px-4 animate__animated animate__fadeIn">
-        <div class="mb-4 px-4 py-1 border border-sky-500/30 rounded-full text-sky-400 text-xs uppercase tracking-widest bg-sky-500/10">
-            Available for Opportunities
-        </div>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6">Mohit <span class="gradient-text">Saini</span></h1>
-        <p class="text-lg md:text-2xl text-slate-400 max-w-2xl">
-            Backend Developer & <span class="text-slate-200">Python/Django Specialist</span>. 
-            Building scalable RESTful APIs and event-driven architectures.
-        </p>
-        <div class="mt-10 flex space-x-4">
-            <a href="mailto:mohit010901@gmail.com" class="bg-sky-500 hover:bg-sky-600 px-8 py-3 rounded-lg font-semibold transition">Hire Me</a>
-            <a href="#projects" class="glass px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 transition">View Work</a>
-        </div>
-    </section>
-
-    <section class="py-20 px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="glass p-8 rounded-2xl border-l-4 border-sky-500">
-            <i data-lucide="code-2" class="mb-4 text-sky-400"></i>
-            <h3 class="text-xl font-bold mb-2">Backend Expert</h3>
-            <p class="text-slate-400 text-sm">Specializing in Django, Flask, and High-Concurrency systems.</p>
-        </div>
-        <div class="glass p-8 rounded-2xl border-l-4 border-indigo-500">
-            <i data-lucide="database" class="mb-4 text-indigo-400"></i>
-            <h3 class="text-xl font-bold mb-2">DB Optimization</h3>
-            <p class="text-slate-400 text-sm">Expertise in PostgreSQL, MongoDB, and Scalable Schema Design.</p>
-        </div>
-        <div class="glass p-8 rounded-2xl border-l-4 border-purple-500">
-            <i data-lucide="cpu" class="mb-4 text-purple-400"></i>
-            <h3 class="text-xl font-bold mb-2">ServiceNow CAD</h3>
-            <p class="text-slate-400 text-sm">Certified Application Developer for enterprise workflow automation.</p>
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+        <div class="animate__animated animate__fadeInUp">
+            <div class="mb-6 px-4 py-1 border border-sky-500/30 rounded-full text-sky-400 text-xs uppercase tracking-widest bg-sky-500/10 inline-block">
+                Based in Noida, UP, India
+            </div>
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tight">Backend <span class="gradient-text">Architect.</span></h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                Python & Django Specialist. Performance-driven Computer Science graduate 
+                specializing in building <span class="text-white">scalable RESTful APIs</span> and 
+                <span class="text-white">event-driven systems</span>.
+            </p>
+            <div class="mt-12 flex flex-wrap justify-center gap-6">
+                <a href="https://linkedin.com" target="_blank" class="flex items-center gap-2 text-slate-400 hover:text-white transition"><i data-lucide="linkedin"></i> LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="flex items-center gap-2 text-slate-400 hover:text-white transition"><i data-lucide="github"></i> GitHub</a>
+                <a href="#" class="flex items-center gap-2 text-slate-400 hover:text-white transition"><i data-lucide="code"></i> LeetCode</a>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="py-20 px-6 md:px-20">
-        <h2 class="text-3xl font-bold mb-12">Featured <span class="text-sky-400">Projects</span></h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="projects" class="py-24 px-6 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 flex items-center gap-4">
+                <span class="w-12 h-[2px] bg-sky-500"></span>
+                Featured Work
+            </h2>
             
-            <div class="glass overflow-hidden rounded-2xl group cursor-pointer">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <i data-lucide="webhook" class="text-sky-400"></i>
-                        <span class="text-xs text-slate-500">July 2025</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl group hover:border-sky-500/50 transition-all duration-500">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="bg-sky-500/10 p-3 rounded-2xl group-hover:scale-110 transition">
+                            <i data-lucide="webhook" class="text-sky-400"></i>
+                        </div>
+                        <span class="text-xs text-slate-500 font-bold">JULY 2025</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-sky-400 transition">Webhook Listener</h3>
-                    <p class="text-slate-400 text-sm mb-4">Asynchronous event-processing system for GitHub webhooks with real-time AJAX dashboard.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Python</span>
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Flask</span>
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">MongoDB</span>
+                    <h3 class="text-2xl font-bold mb-3">Webhook Listener</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Architected an asynchronous system to handle real-time GitHub webhooks for Push, PR, and Merge events using Flask and MongoDB.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">Flask</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">MongoDB</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">Asynchronous</span>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl group hover:border-indigo-500/50 transition-all duration-500">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="bg-indigo-500/10 p-3 rounded-2xl group-hover:scale-110 transition">
+                            <i data-lucide="book-open" class="text-indigo-400"></i>
+                        </div>
+                        <span class="text-xs text-slate-500 font-bold">APRIL 2025</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Book Harbor</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Integrated Google Books API with Django to build a virtual bookshelf platform with dynamic metadata fetching.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">Django</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">REST API</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl group hover:border-purple-500/50 transition-all duration-500">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="bg-purple-500/10 p-3 rounded-2xl group-hover:scale-110 transition">
+                            <i data-lucide="users" class="text-purple-400"></i>
+                        </div>
+                        <span class="text-xs text-slate-500 font-bold">JAN 2025</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">StudyBuddy</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Collaborative platform featuring real-time chat rooms and secure user authentication using Django Middleware.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">Bootstrap</span>
+                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-[10px] uppercase font-bold text-slate-300">Auth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-24 px-6 md:px-20 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 flex items-center gap-4">
+                <span class="w-12 h-[2px] bg-sky-500"></span>
+                Certifications
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass p-10 rounded-3xl flex gap-6 items-center">
+                    <div class="bg-sky-500/20 p-5 rounded-full"><i data-lucide="award" class="text-sky-400 w-8 h-8"></i></div>
+                    <div>
+                        <h4 class="text-xl font-bold">ServiceNow CAD</h4>
+                        <p class="text-slate-400 text-sm">Certified Application Developer</p>
+                    </div>
+                </div>
+                <div class="glass p-10 rounded-3xl flex gap-6 items-center">
+                    <div class="bg-indigo-500/20 p-5 rounded-full"><i data-lucide="settings" class="text-indigo-400 w-8 h-8"></i></div>
+                    <div>
+                        <h4 class="text-xl font-bold">ServiceNow CSA</h4>
+                        <p class="text-slate-400 text-sm">Certified System Administrator</p>
                     </div>
                 </div>
             </div>
 
-            <div class="glass overflow-hidden rounded-2xl group cursor-pointer">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <i data-lucide="book-open" class="text-indigo-400"></i>
-                        <span class="text-xs text-slate-500">April 2025</span>
+            <div class="mt-8 glass p-8 rounded-3xl flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <i data-lucide="graduation-cap" class="text-slate-500"></i>
+                    <div>
+                        <h4 class="font-bold">B.Tech in Computer Science</h4>
+                        <p class="text-slate-400 text-sm">Maharishi Markandeshwar University • 2025 Graduate</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition">Book Harbor</h3>
-                    <p class="text-slate-400 text-sm mb-4">Django-based discovery platform integrated with Google Books API for dynamic metadata.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Django</span>
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">REST API</span>
+                </div>
+                <div class="mt-4 md:mt-0 px-4 py-2 bg-sky-500/10 rounded-xl text-sky-400 font-bold border border-sky-500/20">
+                    CGPA: 7.9 / 10
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 md:px-20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 flex items-center gap-4">
+                <span class="w-12 h-[2px] bg-sky-500"></span>
+                Tech Stack
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2 glass p-10 rounded-[2rem]">
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-8 font-bold">Core Backend</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-6 py-3 bg-sky-500/5 border border-sky-500/20 rounded-2xl text-sky-400 font-bold">Python</span>
+                        <span class="px-6 py-3 bg-sky-500/5 border border-sky-500/20 rounded-2xl text-sky-400 font-bold">Django</span>
+                        <span class="px-6 py-3 bg-sky-500/5 border border-sky-500/20 rounded-2xl text-sky-400 font-bold">Flask</span>
+                        <span class="px-6 py-3 bg-indigo-500/5 border border-indigo-500/20 rounded-2xl text-indigo-400 font-bold">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="glass p-10 rounded-[2rem]">
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-8 font-bold">Databases</h3>
+                    <ul class="space-y-4 font-bold text-slate-300">
+                        <li class="flex items-center gap-3"><i data-lucide="database" class="w-4 h-4 text-emerald-500"></i> PostgreSQL</li>
+                        <li class="flex items-center gap-3"><i data-lucide="database" class="w-4 h-4 text-emerald-500"></i> MongoDB</li>
+                        <li class="flex items-center gap-3"><i data-lucide="database" class="w-4 h-4 text-emerald-500"></i> MySQL</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-[2rem]">
+                    <h3 class="text-xs uppercase tracking-widest text-slate-500 mb-8 font-bold">DevOps</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 bg-slate-800/50 rounded-xl text-center text-xs border border-slate-700">Docker</div>
+                        <div class="p-3 bg-slate-800/50 rounded-xl text-center text-xs border border-slate-700">Git</div>
+                        <div class="p-3 bg-slate-800/50 rounded-xl text-center text-xs border border-slate-700">GitHub</div>
+                        <div class="p-3 bg-slate-800/50 rounded-xl text-center text-xs border border-slate-700">SNC</div>
                     </div>
                 </div>
             </div>
-
-            <div class="glass overflow-hidden rounded-2xl group cursor-pointer">
-                <div class="p-6">
-                    <div class="flex justify-between items-start mb-4">
-                        <i data-lucide="users" class="text-purple-400"></i>
-                        <span class="text-xs text-slate-500">Jan 2025</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition">StudyBuddy</h3>
-                    <p class="text-slate-400 text-sm mb-4">Collaborative learning platform featuring topic-based chat rooms and secure auth.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Python</span>
-                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Bootstrap</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <footer id="contact" class="py-20 border-t border-slate-800 px-6 md:px-20 text-center">
-        <h2 class="text-3xl font-bold mb-4">Let's Build Something Scalable</h2>
-        <p class="text-slate-400 mb-8">Noida, UP, India | +91 7986083439</p>
-        <div class="flex justify-center space-x-6">
-            <a href="https://github.com" class="hover:text-sky-400 transition"><i data-lucide="github"></i></a>
-            <a href="https://linkedin.com" class="hover:text-sky-400 transition"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:mohit010901@gmail.com" class="hover:text-sky-400 transition"><i data-lucide="mail"></i></a>
+        <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
+        <p class="text-slate-400 mb-8">+91 7986083439 | mohit010901@gmail.com</p>
+        <div class="flex justify-center space-x-8 mb-12">
+            <a href="#" class="p-4 glass rounded-full hover:text-sky-400 transition hover:-translate-y-2"><i data-lucide="linkedin"></i></a>
+            <a href="#" class="p-4 glass rounded-full hover:text-sky-400 transition hover:-translate-y-2"><i data-lucide="github"></i></a>
+            <a href="#" class="p-4 glass rounded-full hover:text-sky-400 transition hover:-translate-y-2"><i data-lucide="mail"></i></a>
         </div>
-        <p class="mt-10 text-xs text-slate-600">© 2026 Mohit Saini. Built with Pythonic Passion.</p>
+        <p class="text-xs text-slate-600 font-medium tracking-widest uppercase">© 2026 Mohit Saini • Noida, India</p>
     </footer>
 
     <script>
