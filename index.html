@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Saini | Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-20 flex justify-between items-center">
+        <h1 class="text-xl font-bold tracking-tighter">MS<span class="text-sky-400">.</span></h1>
+        <div class="space-x-8 hidden md:flex text-sm font-medium">
+            <a href="#about" class="hover:text-sky-400 transition">About</a>
+            <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+            <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 animate__animated animate__fadeIn">
+        <div class="mb-4 px-4 py-1 border border-sky-500/30 rounded-full text-sky-400 text-xs uppercase tracking-widest bg-sky-500/10">
+            Available for Opportunities
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Mohit <span class="gradient-text">Saini</span></h1>
+        <p class="text-lg md:text-2xl text-slate-400 max-w-2xl">
+            Backend Developer & <span class="text-slate-200">Python/Django Specialist</span>. 
+            Building scalable RESTful APIs and event-driven architectures.
+        </p>
+        <div class="mt-10 flex space-x-4">
+            <a href="mailto:mohit010901@gmail.com" class="bg-sky-500 hover:bg-sky-600 px-8 py-3 rounded-lg font-semibold transition">Hire Me</a>
+            <a href="#projects" class="glass px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 transition">View Work</a>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-2xl border-l-4 border-sky-500">
+            <i data-lucide="code-2" class="mb-4 text-sky-400"></i>
+            <h3 class="text-xl font-bold mb-2">Backend Expert</h3>
+            <p class="text-slate-400 text-sm">Specializing in Django, Flask, and High-Concurrency systems.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl border-l-4 border-indigo-500">
+            <i data-lucide="database" class="mb-4 text-indigo-400"></i>
+            <h3 class="text-xl font-bold mb-2">DB Optimization</h3>
+            <p class="text-slate-400 text-sm">Expertise in PostgreSQL, MongoDB, and Scalable Schema Design.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl border-l-4 border-purple-500">
+            <i data-lucide="cpu" class="mb-4 text-purple-400"></i>
+            <h3 class="text-xl font-bold mb-2">ServiceNow CAD</h3>
+            <p class="text-slate-400 text-sm">Certified Application Developer for enterprise workflow automation.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 md:px-20">
+        <h2 class="text-3xl font-bold mb-12">Featured <span class="text-sky-400">Projects</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="glass overflow-hidden rounded-2xl group cursor-pointer">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="webhook" class="text-sky-400"></i>
+                        <span class="text-xs text-slate-500">July 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-sky-400 transition">Webhook Listener</h3>
+                    <p class="text-slate-400 text-sm mb-4">Asynchronous event-processing system for GitHub webhooks with real-time AJAX dashboard.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Python</span>
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Flask</span>
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass overflow-hidden rounded-2xl group cursor-pointer">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="book-open" class="text-indigo-400"></i>
+                        <span class="text-xs text-slate-500">April 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-400 transition">Book Harbor</h3>
+                    <p class="text-slate-400 text-sm mb-4">Django-based discovery platform integrated with Google Books API for dynamic metadata.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Django</span>
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">REST API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass overflow-hidden rounded-2xl group cursor-pointer">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <i data-lucide="users" class="text-purple-400"></i>
+                        <span class="text-xs text-slate-500">Jan 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition">StudyBuddy</h3>
+                    <p class="text-slate-400 text-sm mb-4">Collaborative learning platform featuring topic-based chat rooms and secure auth.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Python</span>
+                        <span class="text-[10px] bg-slate-800 px-2 py-1 rounded">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 border-t border-slate-800 px-6 md:px-20 text-center">
+        <h2 class="text-3xl font-bold mb-4">Let's Build Something Scalable</h2>
+        <p class="text-slate-400 mb-8">Noida, UP, India | +91 7986083439</p>
+        <div class="flex justify-center space-x-6">
+            <a href="https://github.com" class="hover:text-sky-400 transition"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com" class="hover:text-sky-400 transition"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:mohit010901@gmail.com" class="hover:text-sky-400 transition"><i data-lucide="mail"></i></a>
+        </div>
+        <p class="mt-10 text-xs text-slate-600">© 2026 Mohit Saini. Built with Pythonic Passion.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
